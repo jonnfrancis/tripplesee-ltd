@@ -42,8 +42,4 @@ export default function App() {
     </div>
   )
 }
-{/* 
-      
-      <Content />
-      <Gallery /> */}
 

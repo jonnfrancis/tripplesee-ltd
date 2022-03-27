@@ -25,7 +25,7 @@ export default function Navbar() {
     return(
         <header className="w-full fixed z-[10000000]" id="header">
             <nav className="flex nav">
-                <div className="flex w-14 sm:w-16 logo">
+                <div className="flex w-14 sm:w-16 o logo">
                    <img src={logo} alt="tripplesee-icon" className=""  onClick={scrollToTop} />
                 </div>
                 <button className="px-2 mobile-nav-toggle" onClick={aria} aria-controls="nav-menu" aria-expanded={visibility ? true : false} ><span className="sr-only">Menu</span><i id="icon-menu" className={visibility ? "bx bx-x" : "bx bx-menu"}></i></button>
@@ -34,7 +34,7 @@ export default function Navbar() {
                         <li className="list-items"><span aria-hidden="true">00</span><Link activeClass="active" to="section1" spy={true} smooth={true} duration={500} >Home</Link></li>
                         <li className="list-items"><span aria-hidden="true">01</span><Link activeClass="active" to="section2" spy={true} smooth={true} duration={500} >Specs</Link></li>
                         <li className="list-items"><span aria-hidden="true">02</span><Link activeClass="active" to="section3" spy={true} smooth={true} duration={500} >Contact Us</Link></li>
-                        <li className="flex items-center leading-relaxed text-center justify-center text-xl text-blue-600">
+                        <li className="flex items-center leading-relaxed text-center justify-center text-xl text-blue-600 dark:text-gray-300 dark:hover:decoration-underline">
                             <div aria-hidden="true">
                                 <i className='bx bx-right-arrow-alt'></i>
                             </div> 

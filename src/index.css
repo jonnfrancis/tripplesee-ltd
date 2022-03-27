@@ -7,7 +7,7 @@
   @apply rounded-full py-4 px-10 font-sans font-bold text-center leading-normal text-sm md:text-base lg:text-xl ;
 }
 .list-items{
-  @apply font-normal mt-2 text-lg leading-relaxed text-center text-black;
+  @apply font-normal mt-2 text-lg leading-relaxed text-center text-black dark:text-gray-400;
 }
 :root {
   --font-base: 'EB Garamond', serif;
@@ -79,32 +79,7 @@ body {
   font-weight: 700;
   margin-inline-end: .75em;
 }
-@media (max-width: 35em) {
-  .primary-navigation{
-    position:fixed;
-    z-index: 1000;
-    inset: 0 0 0 30%;
-    flex-direction: column;
-    padding: min(30vh, 10rem) 2em;
-    --gap: 2em;
-    transform: translateX(100%);
-    transition: transform 350ms ease-in;
-  }
-  .mobile-nav-toggle{
-    position: absolute;
-    z-index: 9999;
-    top: 2rem;
-    right: 2rem;
-    font-size: 1.5rem;
-    display: block;
-    background: #D6D7D7;
-    box-shadow: -3px -3px 4px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(29, 31, 35, 0.3);
-    border-radius: 8px;
-  }
-  /* .heroo{
-    @apply -rotate-45;
-  } */
-}
+
 @media (min-width: 35em) and (max-width: 55em) {
   .primary-navigation li > [aria-hidden]{
     display: none
@@ -141,11 +116,13 @@ body {
   z-index: 30;
   align-self: center;
   justify-self: center;
+  display: block;
 }
 .hero--bg2{
   grid-area: overlap;
   align-self: center;
   justify-self: center;
+  display: block;
 }
 .specs--icon{
   font-size: 2.5rem;
@@ -246,4 +223,36 @@ body {
     margin:8px;
     position: relative;
     transition: all 0.7s ease-out;
+}
+@media (max-width: 35em) {
+  .primary-navigation{
+    position:fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+    --gap: 2em;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+  }
+  .mobile-nav-toggle{
+    position: absolute;
+    z-index: 9999;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    display: block;
+    background: #D6D7D7;
+    box-shadow: -3px -3px 4px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(29, 31, 35, 0.3);
+    border-radius: 8px;
+  }
+  .hero--bg{
+    display: none;
+  }
+  .hero--bg2{
+    display: none
+  }
+  /* .heroo{
+    @apply -rotate-45;
+  } */
 }

@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 export default function Hero() {
     return(
         <section className="">
-            <div className="section__padding app__wrapper bg-white dark:bg-black dark:opacity-70" id="section1">
+            <div className="section__padding app__wrapper bg-white dark:bg-blacker" id="section1">
                 <div className="">
                     <Fade duration={2800} distance={'60px'} top delay={400}><p className="font-bold text-xs sm:text-base lg:text-lg leading-5 mt-16 text-center lg:text-left uppercase tracking-widest text-blue-600 dark:text-slate-200">All things heating solutions</p></Fade>
                     

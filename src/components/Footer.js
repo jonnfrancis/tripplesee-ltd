@@ -7,7 +7,7 @@ import Bounce from 'react-reveal/Bounce'
 
 export default function Footer() {
     return(
-        <section className="app__footer section__padding dark:text-gray-400" id="section5">
+        <section className="app__footer  section__padding bg-bg-light dark:bg-bg-dark dark:text-gray-400" id="section5">
             <div className="app__footerOverlay">
                 <div className="app__footerOverlay-black" />
                 <div className="app__footerOverlay-img app__bg" />
