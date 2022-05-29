@@ -21,8 +21,8 @@ export default function Also(props) {
                             </div>
                             </div>
                         </div>
-                        <div className="pt-10 pb-6 w-full ;">
-                            <h1 className="p__opensans">{props.text}</h1>
+                        <div className="pt-10 pb-6 w-full">
+                            <h1 className="p__opensans hover:text-gray-300">{props.text}</h1>
                         </div>
                     </div></Fade>
     )

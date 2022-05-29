@@ -15,15 +15,15 @@ export default function Navbar() {
     function scrollToTop(){
         scroll.scrollToTop(); 
     };
-    function scrollHeader(){
-        const header = document.getElementById('header')
-        // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
-        if(this.scrollY >= 100) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-    }
-    window.addEventListener('scroll', scrollHeader)
+    // function scrollHeader(){
+    //     const header = document.getElementById('header')
+    //     // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
+    //     if(this.scrollY >= 100) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+    // }
+    // window.addEventListener('scroll', scrollHeader)
 
     return(
-        <header className="w-full fixed z-[10000000]" id="header">
+        <header className="w-full z-[10000000]" id="header">
             <nav className="flex nav">
                 <div className="flex w-14 sm:w-16 o logo">
                    <img src={logo} alt="tripplesee-icon" className=""  onClick={scrollToTop} />
@@ -32,15 +32,15 @@ export default function Navbar() {
                 <div className="" id="nav-menu">
                     <ul className="flex primary-navigation items-center" data-visible={visibility ? true : "false"}>
                         <li className="list-items"><span aria-hidden="true">00</span><Link activeClass="active" to="section1" spy={true} smooth={true} duration={500} >Home</Link></li>
-                        <li className="list-items"><span aria-hidden="true">01</span><Link activeClass="active" to="section2" spy={true} smooth={true} duration={500} >Specs</Link></li>
-                        <li className="list-items"><span aria-hidden="true">02</span><Link activeClass="active" to="section3" spy={true} smooth={true} duration={500} >Contact Us</Link></li>
-                        <li className="flex items-center leading-relaxed text-center justify-center text-xl text-blue-600 dark:text-gray-300 dark:hover:decoration-underline">
+                        <li className="list-items"><span aria-hidden="true">01</span><Link activeClass="active" to="section3" spy={true} smooth={true} duration={500} >FAQs</Link></li>
+                        <li className="list-items"><span aria-hidden="true">02</span><Link activeClass="active" to="section4" spy={true} smooth={true} duration={500} >Services</Link></li>
+                        <li className="flex items-center leading-relaxed cursor-pointer text-center justify-center text-xl text-blue-600 hover:text-black dark:text-gray-300 dark:hover:text-gray-100">
                             <div aria-hidden="true">
                                 <i className='bx bx-right-arrow-alt'></i>
                             </div> 
                             <div className="">
-                                <Link activeClass="active" to="section4" spy={true} smooth={true} duration={500} >
-                                    Buy Now
+                                <Link activeClass="active" to="section5" spy={true} smooth={true} duration={500} >
+                                    Contact Us
                                 </Link>
                             </div>
                         </li>

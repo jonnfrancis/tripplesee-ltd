@@ -1,13 +1,17 @@
 import React from 'react'
 import logo from "../media/icon.png"
 import flames from '../media/flame.svg'
-import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { FiFacebook, FiTwitter, FiMail , FiArrowUp } from 'react-icons/fi';
 import Fade from 'react-reveal/Fade'
 import Bounce from 'react-reveal/Bounce'
+import { animateScroll as scroll } from "react-scroll";
 
 export default function Footer() {
+    function scrollToTop(){
+        scroll.scrollToTop(); 
+    };
     return(
-        <section className="app__footer  section__padding bg-bg-light dark:bg-bg-dark dark:text-gray-400" id="section5">
+        <section className="app__footer bg-bg-light dark:bg-bg-dark  section__padding dark:text-gray-400" id="section5">
             <div className="app__footerOverlay">
                 <div className="app__footerOverlay-black" />
                 <div className="app__footerOverlay-img app__bg" />
@@ -33,6 +37,7 @@ export default function Footer() {
                 <Fade duration={2800} distance={'60px'} bottom><p className="p__opensans">P.O. BOX 473 - 20500, Narok</p></Fade>
                 <Fade duration={2800} distance={'60px'} bottom><p className="p__opensans">+254 710 424 627</p></Fade>
                 <Fade duration={2800} distance={'60px'} bottom><p className="p__opensans">trippleseeltd@gmail.com</p></Fade>
+                <Fade duration={2800} distance={'60px'} bottom><p className="p__opensans">In case of any query, Email us</p></Fade>
             </div>
             <div className="app__footer-links_logo flex flex-col items-center">
                 <Fade duration={2800} distance={'60px'} bottom><img src={logo} alt="footer_logo" /></Fade>
@@ -41,7 +46,7 @@ export default function Footer() {
                 <Fade duration={2800} distance={'60px'} right><div className="app__footer-links_icons flex">
                 <FiFacebook />
                 <FiTwitter />
-                <FiInstagram />
+                <a href="mailto:trippleseeltd@gmail"><FiMail /></a>
                 </div></Fade>
             </div>
             <div className="app__footer-links_work">
@@ -51,9 +56,10 @@ export default function Footer() {
                 <Fade duration={2800} distance={'60px'} bottom><p className="p__opensans">Saturday-Sunday:</p></Fade>
                 <Fade duration={2800} distance={'60px'} bottom><p className="p__opensans">07:00 am - 11:00 pm</p></Fade>
             </div>
+            <div onClick={scrollToTop} className="absolute bottom-14 right-6 padding-10 rounded-full text-2xl sm:text-3xl lg:text-4xl bg-blacker text-white hover:bg-slate-700 dark:hover:bg-gray-600 dark:text-blue-500 dark:bg-gray-400"><FiArrowUp/></div>
             </div>
             <div className="footer__copyright">
-                <p className="p__opensans text-center">Copyright &#169;2020 All rights reserved | Read Tripple See's <a href="#" className="underline underline-offset-2 decoration-blue-600 text-blue-600 decoration-2 hover:text-black dark:hover:text-white hover:decoration-black dark:hover:decoration-white "> Terms of Services</a></p>
+                <p className="p__opensans text-center">Copyright &#169;2020 All rights reserved | Read Tripple See's<div className="underline underline-offset-2 decoration-blue-600 text-blue-600 decoration-2 hover:text-black dark:hover:text-white hover:decoration-black dark:hover:decoration-white">Terms of Services</div></p>
             </div> 
         </section>
     )
