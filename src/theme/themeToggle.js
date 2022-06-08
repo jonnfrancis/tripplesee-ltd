@@ -10,12 +10,12 @@ const Toggle = () => {
             {theme === 'dark' ? (
                 <FaSun
                     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                    className="text-gray-500 dark:text-red-400 text-2xl text-center cursor-pointer"
+                    className="text-blue-600 hover:text-black dark:text-gray-300 dark:hover:text-gray-100 text-2xl text-center cursor-pointer"
                 />
             ) : (
                     <FaMoon
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+                        className="text-blue-600 hover:text-black dark:text-gray-300 dark:hover:text-gray-100 text-2xl cursor-pointer"
                     />
                 )}
         </div>

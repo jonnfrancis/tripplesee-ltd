@@ -45,7 +45,7 @@ export default function Navbar() {
                             </div>
                         </li>
                         <li className="list-items">
-                            <div className="p-2 bg-blue-400 rounded-full">
+                            <div className="p-2 backdrop-blur bg-blue-300 dark:bg-dark backdrop-opacity-25 rounded-full">
                                 <Toggle />
                             </div>
                             </li>

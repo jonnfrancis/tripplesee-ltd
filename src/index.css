@@ -242,9 +242,15 @@ body {
     right: 2rem;
     font-size: 1.5rem;
     display: block;
-    background: #D6D7D7;
-    box-shadow: -3px -3px 4px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(29, 31, 35, 0.3);
+    /* @apply bg-[#D6D7D7] dark:bg-zinc-800;
+    box-shadow: -3px -3px 4px rgba(255, 255, 255, 0.7), 2px 2px 5px rgba(29, 31, 35, 0.3); */
     border-radius: 8px;
+  }
+  #icon-menu{
+    font-size: 45px;
+  }
+  .bx{
+    @apply dark:text-blue-300;
   }
   .hero--bg{
     display: none;
@@ -259,7 +265,8 @@ body {
 ::-webkit-scrollbar{
   width: .8rem;
   border-radius: .5rem;
+  @apply dark:bg-blacker bg-white; 
 }
 ::-webkit-scrollbar-thumb{
-  background: var(--color-black);
+  @apply bg-blue-500 dark:bg-black;
 }

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import REACTGA from 'react-ga'
 // import logo from './logo.svg';
 import './App.css';
@@ -20,6 +20,9 @@ REACTGA.initialize(trackingId)
 
 
 export default function App() {
+  useEffect(() => {
+    REACTGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   const cards = data.map(item => {
     return(
       <Also 
