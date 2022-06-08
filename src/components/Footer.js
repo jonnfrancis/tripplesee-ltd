@@ -10,6 +10,7 @@ export default function Footer() {
     function scrollToTop(){
         scroll.scrollToTop(); 
     };
+    
     return(
         <section className="app__footer bg-bg-light dark:bg-bg-dark  section__padding dark:text-gray-400" id="section5">
             <div className="app__footerOverlay">
@@ -56,7 +57,7 @@ export default function Footer() {
                 <Fade duration={2800} distance={'60px'} bottom><p className="p__opensans">Saturday-Sunday:</p></Fade>
                 <Fade duration={2800} distance={'60px'} bottom><p className="p__opensans">07:00 am - 11:00 pm</p></Fade>
             </div>
-            <div onClick={scrollToTop} className="absolute bottom-14 right-6 padding-10 rounded-full text-2xl sm:text-3xl lg:text-4xl bg-blacker text-white hover:bg-slate-700 dark:hover:bg-gray-600 dark:text-blue-500 dark:bg-gray-400"><FiArrowUp/></div>
+            <div id="up" onClick={scrollToTop} className="fixed bottom-8 right-4 text-2xl sm:text-3xl lg:text-4xl text-dark dark:text-gray-400 "><FiArrowUp/></div>
             </div>
             <div className="footer__copyright">
                 <p className="p__opensans text-center">Copyright &#169;2020 All rights reserved | Read Tripple See's<div className="underline underline-offset-2 decoration-blue-600 text-blue-600 decoration-2 hover:text-black dark:hover:text-white hover:decoration-black dark:hover:decoration-white">Terms of Services</div></p>
