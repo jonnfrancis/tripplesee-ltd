@@ -39,7 +39,7 @@ export default function App() {
         <Hero />
         <About />
         <Specs /> 
-        <section className="bg-gray-100 dark:bg-blacker mb-4 h-full md:h-screen w-full;" id="section4">
+        <section className="bg--white app__aboutus app__bg flex__center dark:bg-blacker dark:text-gray-400" id="section4">
               <div className="mx-auto px-0 md:px-4 py-4 w-[85%]">
               <Fade duration={2800} distance={'60px'} bottom><h1 className="headtext__cormorant text-center pb-6">We Also:</h1></Fade>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-center items-start gap-4 ">

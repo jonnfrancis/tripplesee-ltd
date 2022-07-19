@@ -20,7 +20,7 @@ const also = [
     {
         id: 1,
         title: "Anaerobic digestor construction and installations",
-        text: "If you want to produce quality biomethane (biogas) and in high quantities with sustainable pressure, we are the people to come to. We offer quotations and service installation of systems. Size of your desire.",
+        text: "If you want to produce quality biomethane (biogas) and in high quantities with sustainable pressure, we are the people to come to. We offer quotations and service installation of systems.",
         img: biodigestor,
     },
     {

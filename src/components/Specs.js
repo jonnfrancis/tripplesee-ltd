@@ -13,7 +13,7 @@ export default function Specs() {
                         <Fade delay={600} duration={2800} distance={'60px'} bottom><div className="spec-sheet">
                             <i className='specs--icon bx bxs-thermometer'></i>
                             <h4 className="font--serif font-semibold tracking-wide capitalize lg:leading-[70px] text-xl  xl:leading-loose">Temperature</h4>
-                            <p className="p__opensans pt-2">A briquette will heat a Jiko by approximately  25°F (14 °C)<span aria-hidden="true">, so 20 charcoal briquettes will heat it by 500 °F (280 °C).</span></p>
+                            <p className="p__opensans pt-2">A single briquette will heat a Jiko by approximately  25°F (14 °C)<span aria-hidden="true">, so 20 charcoal briquettes will heat it by 500 °F (280 °C).</span></p>
                         </div></Fade>
                         <Fade delay={600} duration={2800} distance={'60px'} bottom><div className="spec-sheet">
                             <i className='specs--icon bx bx-time'></i>
