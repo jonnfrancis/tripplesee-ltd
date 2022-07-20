@@ -1,6 +1,69 @@
 .section__padding {
   padding: 4rem 6rem;
 }
+.hs{
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.body {
+  opacity: 0.1;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  @apply dark:bg-blacker bg-white; 
+  display: flex;
+  height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+.loader{
+  position: relative;
+  display: flex;
+  width: 88rem;
+  align-items: center;
+}
+.logo-loader,
+.divider,
+.mask,
+.items{
+  position: absolute
+}
+.logo-loader,
+.mask{
+  left: calc(50% + 2px);
+}
+.divider{
+  left: 50%;
+  width: 5px;
+  height: 0rem;
+  margin: 0 auto;
+  @apply bg-blacker dark:bg-white; 
+}
+.mask{
+  z-index: 2000;
+  align-self: 8rem;
+  width: 40rem;
+  height: 8rem;
+  @apply dark:bg-blacker bg-white; 
+}
+
+.items {
+  list-style: none;
+  left: 50%;
+  z-index: 3000;
+  font-size: 1.5rem;
+  font-weight: 2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
 
 .flex__center {
   display: flex;
