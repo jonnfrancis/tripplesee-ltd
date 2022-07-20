@@ -4,7 +4,7 @@ import Fade from 'react-reveal'
 
 export default function Also(props) {
     return(
-        <Fade duration={2800} bottom><div className="m-2.5 font--sans bg-white dark:bg-dark dark:text-gray-400 rounded-lg shadow-[0_20x_20px_rgba(0,0,0,0.2) overflow-hidden w-72] ">
+        <Fade duration={1500} bottom><div className="m-2.5 font--sans bg-white dark:bg-dark dark:text-gray-400 rounded-lg shadow-[0_20x_20px_rgba(0,0,0,0.2) overflow-hidden w-72] ">
                         <div className="">
                             <div className="">
                                 <img src={props.img} className="w-full object-cover h-52" alt="img " />

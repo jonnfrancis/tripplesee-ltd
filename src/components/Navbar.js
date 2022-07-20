@@ -23,7 +23,7 @@ export default function Navbar() {
     // window.addEventListener('scroll', scrollHeader)
 
     return(
-        <header className="w-full z-[10000000]" id="header">
+        <header className="w-full" id="header">
             <nav className="flex nav">
                 <div className="flex w-14 sm:w-16 o logo">
                    <img src={logo} alt="tripplesee-icon" className=""  onClick={scrollToTop} />
