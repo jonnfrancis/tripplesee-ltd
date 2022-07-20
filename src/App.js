@@ -37,9 +37,6 @@ export default function App() {
   let divider = React.useRef(null)
   let container = React.useRef(null)
   let items = React.useRef(null)
-  let item1 = React.useRef(null)
-  let item2 = React.useRef(null)
-  let item3 = React.useRef(null)
   let body = React.useRef(null)
   let everything = React.useRef(null)
 
@@ -66,9 +63,9 @@ export default function App() {
           <div ref={el => divider = el} className="divider"></div>
           <div className="mask"></div>
           <ul className="items leading-relaxed cursor-pointer text-xl text-blue-600 hover:text-black dark:text-gray-300 dark:hover:text-gray-100" ref={el => items = el}>
-            <li className="item item2" ref={el => item2 = el}>Innovation</li>
-            <li className="item item1" ref={el => item1 = el}>Briquettes</li>
-            <li className="item item3" ref={el => item3 = el}>Energy</li>
+            <li className="item item2" >Innovation</li>
+            <li className="item item1">Briquettes</li>
+            <li className="item item3">Energy</li>
           </ul>
         </div>
       </div>
