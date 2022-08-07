@@ -23,7 +23,7 @@ module.exports = {
       //   'xl': '1600px'
       // },
       backgroundImage: {
-        "bg-light": "url('../src/media/grad.png')",
+        "bg-light": "url('../src/media/grad.jpg')",
         "bg-dark": "url('../src/media/bg.png')",
       },
       backgroundColor: {

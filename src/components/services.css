@@ -1,0 +1,338 @@
+:root {
+    --font-base: 'EB Garamond', serif;
+    --font-alt: 'Inter', sans-serif;
+    
+    --color-black-alt: #0c0c0c;
+    --color-black: #2F3144;
+    --color-blue: #574AE6;
+    --bg-white: #edf0f4;
+  }
+.slider {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
+  }
+  .services {
+    position: relative;
+    height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .bg{
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+  }
+  .knob-container{
+    position: absolute;
+    top: 16px;
+  }
+  
+  .services--text{
+    @apply dark:bg-blacker dark:bg-opacity-40 bg-white bg-opacity-40 dark:text-gray-400; 
+    height: 75vh;
+    width: 100vw;
+    position: absolute;
+    transform: translateY(90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 40px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  
+  .services--text::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='150' preserveAspectRatio='none' viewBox='0 0 1440 150'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1034%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c15 C 48%2c30.6 144%2c85.8 240%2c93 C 336%2c100.2 384%2c48 480%2c51 C 576%2c54 624%2c112.4 720%2c108 C 816%2c103.6 864%2c34.2 960%2c29 C 1056%2c23.8 1104%2c82.6 1200%2c82 C 1296%2c81.4 1392%2c37.2 1440%2c26L1440 150L0 150z' fill='rgba(255%2c 255%2c 255%2c 0.6)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1034'%3e%3crect width='1440' height='150' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    position: absolute;
+    z-index: -20;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  
+  @supports (backdrop-filter: blur(1rem)){
+    .services--text {
+      backdrop-filter: blur(38px);
+    }
+  }
+  .services--title{
+    opacity: 0;
+    font-family: var(--font-base);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.001em;
+    margin-bottom: 13px;
+    text-transform: capitalize;
+    color: var(--color-black-alt);
+    @apply dark:text-gray-400;
+  }
+  .services--desc{
+    opacity: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.001em;
+    margin-bottom: 13px;
+    padding-bottom: 20px;
+    color: var(--color-black);
+    @apply dark:text-gray-400;
+
+  }
+  .services--button{
+    opacity: 0;
+    position: relative;
+    display: flex;
+    height: 58px;
+    width: 0px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .services--button > img {
+    position: absolute;
+    width: 100%;
+    object-fit: center;
+  }
+  .card--login{
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: var(--color-black);
+    padding-top: 15px;
+    @apply dark:text-gray-400;
+    opacity: 0;
+  }
+  /* .services--button:hover {
+  } */
+  
+  .cards {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+   .icons{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    bottom: 15%;
+  }
+  .icon--previous{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    z-index: 100;
+    cursor: pointer;
+    user-select: none;
+    margin-right: auto;
+  }
+  .icon--next{
+    position: absolute;
+    right: 15%;
+    z-index: 100;
+    cursor: pointer;
+    user-select: none;
+  } 
+
+
+.round {
+    /* position: absolute;
+    border: 2px solid var(--color-black-alt);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    color: var(--color-black-alt);
+    @apply dark:text-gray-400; */
+
+    background-color: #f0ede4;
+    border-radius: 50%;
+    box-shadow: 0 2.1px 1.3px rgba(0, 0, 0, 0.044),
+      0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
+      0 25px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    height: 50px;
+    /* left: 10px;
+    
+    top: 10px; */
+    width: 50px;
+    opacity: 0;
+    @apply dark:bg-gray-500;
+    
+}
+
+#cta{
+    width:100%; cursor: pointer; position: absolute;
+}
+
+#cta .arrow{left: 10%;}
+.arrow {position: absolute;font-size: 28px; bottom: 0;  margin-left:0px; top:10px;}
+.segunda{margin-left: 8px;}
+
+@keyframes bounceAlpha {
+  0% {opacity: 1; transform: translateX(0px) scale(1);}
+  25%{opacity: 0; transform:translateX(10px) scale(0.9);}
+  26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+  55% {opacity: 1; transform: translateX(0px) scale(1);}
+}
+
+.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+.arrow.primera.bounceAlpha {
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+.round:hover .arrow{
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+.round:hover .arrow.primera{
+    animation-name: bounceAlpha;
+    animation-duration:1.4s;
+    animation-delay:0.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+.down-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 82%;
+    left: 87%;
+    opacity: 0;
+  }
+  .bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  @media only screen  and (min-width : 750px) {
+    .bg{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        
+        align-items:center;
+        justify-content: center;
+    }
+    .down-arrow {
+      top: 72%;
+      left: 87%;
+      opacity: 0;
+    }
+    .services--text{
+        width: 70%;
+        height: 50%; 
+        bottom: 0%;
+    }
+    .icons{
+        top: 0;
+    }
+    .icon--previous {
+        position: absolute;
+        left: 30%;
+        top: 90%;
+    }
+    .icon--next{
+        position: absolute;
+        top: 90%;
+        right: 35%;
+    }
+    .down-arrow{
+        position: absolute;
+        top: 65%;
+        left: 66%;
+    }
+    .services--text {
+      position: absolute;
+      transform: translateY(-30%);
+      opacity: 0;
+      width: 10vh;
+      min-height: 58vh;
+    }
+    .services--text::after{
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: transparent;
+    }
+    .bg{
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .bg::after{
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='439' preserveAspectRatio='none' viewBox='0 0 1440 439'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1163%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c30 C 48%2c69.4 144%2c230 240%2c227 C 336%2c224 384%2c6.8 480%2c15 C 576%2c23.2 624%2c235.4 720%2c268 C 816%2c300.6 864%2c182.4 960%2c178 C 1056%2c173.6 1104%2c264.2 1200%2c246 C 1296%2c227.8 1392%2c118.8 1440%2c87L1440 439L0 439z' fill='rgba(255%2c 255%2c 255%2c 0.6)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1163'%3e%3crect width='1440' height='439' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      animation-duration: 1.4s;
+      animation-name: fade;
+      animation-delay: .8s;
+      transform: translateY(0%);
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      z-index: -1;
+    }
+    @keyframes fade{
+      from{transform: translateY(50%); opacity: 0;}
+      to{transform: translateY(0%); opacity: 1}
+    }
+    .knob-container{
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: rotate(90deg);
+    }
+    .services--desc{
+      max-width: 60%;
+    }
+    .icons{
+      bottom: 25%;
+    }
+    }

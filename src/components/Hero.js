@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "react-scroll";
+import {Link} from "react-router-dom";
 import bgPic from '../media/hero.png'
 import Fade from 'react-reveal/Fade';
 
@@ -9,13 +9,13 @@ export default function Hero() {
         <section className="">
             <div className="section__padding app__wrapper bg-white dark:bg-dark" id="section1">
                 <div className="lo">
-                    <Fade duration={1500} distance={'60px'} bottom delay={4000}><p className="font-bold text-xs sm:text-base lg:text-lg leading-5 mt-16 text-center lg:text-left uppercase tracking-widest text-blue-600 dark:text-slate-200">All things heating solutions</p></Fade>
+                    <Fade duration={1500} distance={'60px'} bottom delay={0}><p className="font-bold text-xs sm:text-base lg:text-lg leading-5 mt-16 text-center lg:text-left uppercase tracking-widest text-blue-600 dark:text-slate-200">All things heating solutions</p></Fade>
                     
-                    <Fade duration={1500} distance={'60px'} bottom delay={4200}><h1 className="font--serif font-bold mt-2 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-normal sm:leading-[70px] md:leading-[69px] dark:text-slate-300 lg:leading-[139%] xl:leading-[140%] text-center lg:text-left text-black">These Briquettes<br /> are the solution</h1></Fade>
-                    <Fade duration={1500} distance={'60px'} bottom delay={4400}><h6 className="font-normal mt-2 text-lg leading-relaxed text-center lg:text-left text-black dark:text-slate-100">With wood-dependent and gas-dependent populations growing in the region, while access to wood and gas declines, briquettes offer a practical solution to supplement the use of wood and lpg as fuel.</h6></Fade>
-                    <div className="flex flex-row gap-6 mt-8 justify-left items-center p-0">
-                        <Fade duration={1500} distance={'60px'} delay={4600} left><Link activeClass="active" to="section2" spy={true} smooth={true} duration={500} ><button className="btn text-white hover:text-blue-600 bg-blue-600 hover:bg-gray-300 dark:text-slate-800 dark:hover:text-blue-700 dark:bg-slate-400 dark:hover:bg-blue-400">Get Started</button></Link></Fade>
-                        <Fade duration={1500} distance={'60px'} delay={4600} right><Link activeClass="active" to="section3" spy={true} smooth={true} duration={500} ><button className="btn text-blue-400 hover:text-gray-600 dark:text-slate-400 dark:hover:text-blue-600 border border-blue-600 hover:border-gray-700 outline-none dark:border-slate-500 dark:hover:border-blue-600">Learn More</button></Link></Fade>
+                    <Fade duration={1500} distance={'60px'} bottom delay={200}><h1 className="font--serif font-bold mt-2 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-normal sm:leading-[70px] md:leading-[69px] dark:text-slate-300 lg:leading-[139%] xl:leading-[140%] text-center lg:text-left text-black">These Briquettes<br /> are the solution</h1></Fade>
+                    <Fade duration={1500} distance={'60px'} bottom delay={400}><h6 className="font-normal mt-2 text-lg leading-relaxed text-center lg:text-left text-black dark:text-slate-100">With wood-dependent and gas-dependent populations growing in the region, while access to wood and gas declines, briquettes offer a practical solution to supplement the use of wood and lpg as fuel.</h6></Fade>
+                    <div className="flex flex-row gap-6 mt-8 justify-center lg:justify-start items-center p-0">
+                        <Fade duration={1500} distance={'60px'} delay={600} left><Link to="/home" ><button className="btn text-white hover:text-blue-600 bg-blue-600 hover:bg-gray-300 dark:text-slate-800 dark:hover:text-blue-700 dark:bg-slate-400 dark:hover:bg-blue-400">Get Started</button></Link></Fade>
+                        <Fade duration={1500} distance={'60px'} delay={600} right><Link to="/contacts" ><button className="btn text-blue-400 hover:text-gray-600 dark:text-slate-400 dark:hover:text-blue-600 border border-blue-600 hover:border-gray-700 outline-none dark:border-slate-500 dark:hover:border-blue-600">Learn More</button></Link></Fade>
                     </div>
                 </div>
                 <div className="hero mt-12 lg:ml-6 w-[100%] sm:w-[80%] ">

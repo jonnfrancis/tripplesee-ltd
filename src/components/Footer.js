@@ -13,24 +13,7 @@ export default function Footer() {
     
     return(
         <section className="app__footer bg-bg-light dark:bg-bg-dark  section__padding dark:text-gray-400" id="section5">
-            <div className="app__footerOverlay">
-                <div className="app__footerOverlay-black" />
-                <div className="app__footerOverlay-img app__bg" />
-            </div>
-            <Fade duration={1700} distance={'60px'} right><div className="app__newsletter">
-                <div className="app__newsletter-heading">
-                <div className="flex items-center justify-center flex-col" style={{ marginBottom: '1rem' }}>
-                    <p className="p__cormorant">Newsletter</p>
-                    <img src={flames} alt="flames_image" className="spoon__img self-center" />
-                </div>
-                <h1 className="headtext__cormorant">Subscribe To Our Newsletter</h1>
-                <p className="p__opensans">And never miss latest Updates!</p>
-                </div>
-                <div className="app__newsletter-input flex__center">
-                <input type="email" placeholder="Enter your email address" />
-                <button type="button" className="custom__button">Subscribe</button>
-                </div>
-            </div></Fade>
+           
                 {/* <img src={logo} alt='tripplesee logo' /> */}
             <div className="app__footer-links">
             <div className="app__footer-links_contact">
