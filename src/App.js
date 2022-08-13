@@ -12,6 +12,7 @@ import About from './components/About'
 import Services from './components/Services'
 import AllServices from './AllServices';
 import Contact from './components/Contact'
+import Also from './components/Also'
 import Contactlayout from './components/Contactlayout'
 
 import './App.css';
@@ -33,7 +34,7 @@ export default function App() {
   
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter  basename="/">
         <Routes>
             <Route path="/" element={<AllServices />} />
             <Route path="home" element={<Layout />}>
@@ -41,9 +42,8 @@ export default function App() {
                 <div>
                   <div >
                     <Hero />
-                    <About />
                     <Specs />
-                      
+                    <Also />  
                   </div>
                 </div>
               } />

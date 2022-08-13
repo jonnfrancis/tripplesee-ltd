@@ -1,22 +1,82 @@
 import React from 'react';
 import Fade from 'react-reveal'
+import './also.css'
+import { FaWindowClose } from "react-icons/fa";
+import b1 from '../media/briquettes/1.jpg'
+import b2 from '../media/briquettes/2.jpg'
+import b3 from '../media/briquettes/3.jpg'
+import b4 from '../media/briquettes/4.jpg'
+import b5 from '../media/briquettes/7.jpeg'
+import b6 from '../media/briquettes/5.jpg'
+import b7 from '../media/briquettes/6.jpeg'
 
+const imgData = [
+    {
+        id: 1,
+        img: b1,
+        alt: "Tripplesee briquettes"
+    },
+    {
+        id: 2,
+        img: b2,
+        alt: "Tripplesee briquettes"
+    },
+    {
+        id: 3,
+        img: b3,
+        alt: "Tripplesee briquettes"
+    },
+    {
+        id: 4,
+        img: b4,
+        alt: "Tripplesee briquettes"
+    },
+    {
+        id: 5,
+        img: b5,
+        alt: "Tripplesee briquettes"
+    },
+    {
+        id: 6,
+        img: b6,
+        alt: "Tripplesee briquettes"
+    },
+    {
+        id: 7,
+        img: b7,
+        alt: "Tripplesee briquettes"
+    },
+]
 
-export default function Also(props) {
+export default function Also() {
+    const [model, setModel] = React.useState(false)
+    const [tempImg, setTempImg] = React.useState('')
+    function getImg(img) {
+        setTempImg(img)
+        setModel(true)
+    }
+    function goBack() {
+        setModel(false)
+    }
     return(
-        <Fade duration={1500} bottom><div className="m-2.5 font--sans bg-white dark:bg-dark dark:text-gray-400 rounded-lg shadow-[0_20x_20px_rgba(0,0,0,0.2) overflow-hidden w-72] ">
-                        <div className="">
-                            <div className="">
-                                <img src={props.img} className="w-full object-cover h-52" alt="img " />
-                            </div>
-                            <div className="flex flex-col justify-center items-start  min-h-64">
-                                <div className="bg-blue-500 dark:bg-blue-800 w-full">
-                                    <h1 className="font--serif color-black max-w-[90%] font-semibold p-5 tracking-wide capitalize lg:leading-[70px] text-2xl  xl:leading-loose">{props.title}</h1>
-                                </div>
-                                <p className="p__opensans pt-2 p-5">{props.text}</p>
-                            </div>
-                        </div>
-                    </div>
-                    </Fade>
+        <div className="also">
+            <div className={model ? "model open" : "model"} >
+                <img src={tempImg} alt="tripplesee briquettes" />
+                <FaWindowClose className="model--svg" onClick={goBack}/>
+            </div>
+            <div className="py-6">
+                <Fade duration={1500} distance={'60px'} bottom delay={0}><h1 className="headtext__cormorant" style={{textAlign: 'center'}}>Gallery📷</h1></Fade>
+                <Fade duration={1500} distance={'60px'} bottom delay={0}><p className="p__opensans text-center">click image to enlarge</p></Fade>
+            </div>
+            <div className="also--gallery">
+                {imgData.map((item, index) => {
+                        return (
+                            <Fade duration={1500} distance={'60px'} bottom delay={0}><div key={index} className="also--pics" onClick={() => getImg(item.img)}>
+                                    <img src={item.img} alt={item.alt} style={{width: '100%'}} />
+                            </div></Fade>
+                        )
+                    })}
+            </div>    
+        </div>
     )
 }

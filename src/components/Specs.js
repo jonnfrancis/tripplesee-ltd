@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade'
 
 export default function Specs() {
     return(
-        <section className="bg--white app__aboutus app__bg flex__center section__padding dark:bg-dark dark:text-gray-400" id="section3">
+        <section className="bg--white app__aboutus app__bg flex__center section__padding dark:bg-dark dark:text-gray-400" id="whyBriquettes">
             <div className="">
                 <Fade duration={2800} distance={'60px'} bottom><h1 className="headtext__cormorant text-center">Why Briquettes?</h1></Fade>
                 <Fade duration={2800} distance={'60px'} bottom><h6 className="pt-4 text-center p__opensans">A briquette is a compressed block of charcoal dust<span aria-hidden="true"> or other combustible biomass material (e.g. charcoal, sawdust, wood chips, peat, or paper)</span> used for fuel and kindling to start a fire. </h6></Fade>
