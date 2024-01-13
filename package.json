@@ -1,7 +1,7 @@
 {
   "name": "tripplesee",
   "version": "0.1.0",
-  "homepage": "https://jonnfrancis.github.io/tripplesee-ltd/",
+  "homepage": "https:/johnfrancis.dev/tripplesee-ltd/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
