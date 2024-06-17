@@ -1,5 +1,5 @@
 # TrippleSee
-[A shot of Tripplesee's loading screen](https://imgur.com/SvFp9WU)
+![A shot of Tripplesee's loading screen](https://imgur.com/SvFp9WU)
 
 ## Project Overview
 
