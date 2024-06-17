@@ -42,8 +42,6 @@ TrippleSee Ltd employs cutting-edge technology to optimize the production proces
 
 TrippleSee is a significant step towards a sustainable future, addressing both waste management and renewable energy needs. By focusing on climate-neutral, affordable, and innovative solutions, TrippleSee Ltd is making a considerable impact in the renewable energy sector.
 
-For more information about TrippleSee and to see more projects, visit my portfolio [here](#).
+For more information about TrippleSee and to see more projects, visit my portfolio [here](https://www.johnfrancis.dev/).
 
 ---
-
-This should correctly display the images from Imgur.
